@@ -1,212 +1,116 @@
-
 body {
-    background: #141414;
-    /* Define a cor de fundo da página */
+    background-color: #141414;
     color: #fff;
-    /* Define a cor do texto principal */
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    /* Define a fonte usada no site */
     margin: 0;
-    /* Remove a margem padrão do body */
-    min-height: 100vh;
-    /* Garante que o body ocupe pelo menos toda a altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Geist', sans-serif;
 }
 
-main {
-    display: flex;
-    /* Usa flexbox para layout */
-    flex-direction: column;
-    /* Organiza os elementos em coluna */
-    align-items: center;
-    /* Centraliza os itens horizontalmente */
-    justify-content: center;
-    /* Centraliza os itens verticalmente */
-    min-height: 100vh;
-    /* Garante altura mínima de 100% da tela */
+.conteudo-principal {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    /* Define o tamanho da fonte do título */
-    font-weight: bold;
-    /* Deixa o texto em negrito */
-    margin-bottom: 2rem;
-    /* Espaço abaixo do título */
+    font-size: 3.5vw;
+    font-weight: 300;
+    margin-bottom: 30px;
     letter-spacing: 1px;
-    /* Espaçamento entre letras */
 }
 
-section[aria-label="Perfis disponíveis"] {
-    width: 100%;
-    /* Ocupa toda a largura disponível */
-    max-width: 600px;
-    /* Limita a largura máxima */
+.lista-perfis {
     display: flex;
-    /* Usa flexbox */
     justify-content: center;
-    /* Centraliza os perfis */
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-bottom: 50px;
+    list-style: none;
+    padding: 0;
 }
 
-nav.profiles {
+.item-perfil {
+    width: 10vw;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.perfil {
     display: flex;
-    /* Usa flexbox para os perfis */
-    gap: 2rem;
-    /* Espaço entre os perfis */
-}
-
-ul {
-    list-style: none; /* Remove o ponto dos itens da lista */
-    padding: 0; /* Remove o padding padrão */
-    margin: 0; /* Remove a margem padrão */
-    display: flex; /* Usa flexbox para os itens */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os itens */
-    gap: 1rem; /* Espaço entre os itens */
-}
-
-.profile {
-    text-decoration: none;
-    /* Remove sublinhado dos links */
-    color: #fff;
-    /* Cor do texto dos links */
-    transition: transform 0.2s, box-shadow 0.2s;
-    /* Suaviza animações de transformação e sombra */
-}
-
-figure {
-    margin: 0;
-    /* Remove margem padrão */
-    display: flex;
-    /* Usa flexbox */
     flex-direction: column;
-    /* Organiza em coluna */
     align-items: center;
-    /* Centraliza itens */
+    text-decoration: none;
+    color: inherit;
 }
 
-img {
-    width: 120px;
-    /* Largura fixa da imagem */
-    height: 120px;
-    /* Altura fixa da imagem */
-    border-radius: 8px;
-    /* Bordas arredondadas */
+/* ---------- AVATAR ---------- */
+
+.avatar-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone-avatar {
+    width: 100%;
+    height: 100%;
+}
+
+.icone-avatar img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    /* Mantém proporção da imagem */
-    margin-bottom: 0.5rem;
-    /* Espaço abaixo da imagem */
-    background: #222;
-    /* Cor de fundo da imagem */
-    display: block;
-    /* Exibe como bloco */
-    border: 1px transparent;
-    /* Borda inicial invisível */
+    outline: 2px solid transparent;
+    /* reserva espaço */
+    transition: outline-color 0.3s;
 }
 
-img:hover {
-    border: 1px solid #fff;
-    /* Borda branca ao passar o mouse */
+/* ---------- NOME ---------- */
+
+.nome-perfil {
+    font-size: 1.2vw;
+    margin-top: 8px;
+    color: #808080;
+    font-weight: 400;
+    transition: color 0.3s;
 }
 
-figcaption {
-    font-size: 1.1rem;
-    /* Tamanho da fonte da legenda */
-    font-weight: 500;
-    /* Peso da fonte */
-    margin-top: 0.5rem;
-    /* Espaço acima da legenda */
-    letter-spacing: 0.5px;
-    /* Espaçamento entre letras */
+/* ---------- HOVER UNIFICADO ---------- */
+
+.perfil:hover img {
+    outline-color: #fff;
 }
 
-/* Light mode */
-body.light-mode {
-    background: #f5f5f5; /* Cor de fundo clara */
-    color: #222; /* Cor do texto escura */
+.perfil:hover .nome-perfil {
+    color: #fff;
 }
 
-.light-mode .profile {
-    color: #222; /* Links escuros */
+/* ---------- GERENCIAR ---------- */
+
+.gerenciar {
+    margin-top: 20px;
 }
 
-.light-mode img {
-    background: #eee; /* Fundo claro para imagens */
-    border: 1px solid #ccc; /* Borda clara */
+.botao-gerenciar {
+    background: transparent;
+    border: 1px solid grey;
+    color: grey;
+    padding: 10px 30px;
+    font-size: 1vw;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 200;
+    transition: all 0.3s;
 }
 
-.light-mode img:hover {
-    border: 1px solid #222; /* Borda escura ao passar o mouse */
+.botao-gerenciar:hover {
+    border-color: #e5e5e5;
+    color: #e5e5e5;
 }
-
-
-/* Responsividade para tablets e celulares */
-@media (max-width: 900px) {
-    section[aria-label="Perfis disponíveis"] {
-        max-width: 100%;
-        /* Remove limite de largura */
-        padding: 0 1rem;
-        /* Adiciona espaçamento lateral */
-    }
-
-    nav.profiles {
-        gap: 1rem;
-        /* Reduz espaço entre perfis */
-    }
-
-    img {
-        width: 90px;
-        /* Reduz tamanho da imagem */
-        height: 90px;
-    }
-
-    h1 {
-        font-size: 2rem;
-        /* Reduz tamanho do título */
-    }
-}
-
-@media (max-width: 600px) {
-    main {
-        /* aumenta a margem superior para dar mais espaço em telas pequenas */
-        margin-top: 6rem;
-
-        min-height: auto;
-        /* Remove altura mínima */
-        padding: 2rem 0;
-    }
-
-    nav.profiles {
-        flex-direction: column;
-        /* Perfis em coluna */
-        align-items: center;
-    }
-
-    ul {
-        gap: 4rem;
-        /* Aumenta espaço entre itens */
-    }
-}
-
-@media (min-width: 901px) {
-    nav.profiles {
-        flex-direction: row; /* Perfis na horizontal em telas grandes */
-        align-items: center;
-    }
-
-    img {
-        width: 70px;
-        /* Imagem menor */
-        height: 70px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-        /* Título menor */
-    }
-
-    figcaption {
-        font-size: 1rem;
-        /* Legenda menor */
-    }
-}
- 

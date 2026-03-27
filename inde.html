@@ -7,48 +7,53 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <button id="theme-toggle" onclick="toggleTheme()" style="position:absolute;top:1rem;right:1rem;z-index:10;background:none;border:none;font-size:2rem;cursor:pointer" aria-label="Alternar tema">🌙</button>
+    <main class="conteudo-principal">
         <h1>Quem está assistindo?</h1>
-        <section aria-label="Perfis disponiveis">
-            <nav class="profiles">
-                <ul>
-                    <li>
-                        <a href="#" class="profile">
-                            <figure>
-                                <img src="/assets/perfil-1.jpg" alt="Um personagem de aparência gótica e caricata, com cabelos roxos e monóculo, posa em um cenário fantástico de miniaturas sombrias iluminadas por velas.">
-                                <figcaption>Gustavo</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="profile">
-                            <figure>
-                                <img src="/assets/perfil-2.jpg" alt="Perfil 2">
-                                <figcaption>Maria</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="profile">
-                            <figure>
-                                <img src="/assets/Gemini_Generated_Image_6ounr26ounr26oun.png" alt="Perfil 3">
-                                <figcaption>Enzo</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="profile">
-                            <figure>
-                                <img src="/assets/Gemini_Generated_Image_xuf68ixuf68ixuf6.png   " alt="Perfil 4">
-                                <figcaption>Maria</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <ul class="lista-perfis">
+            <!-- perfil 1 -->
+            <li class="item-perfil">
+                <a href="catalogo/catalogo.html" class="perfil">
+                    <figure class="avatar-container">
+                        <span class="imagem-perfil tema-cris" aria-hidden="true">
+                            <span class="icone-avatar">
+                                <img src="assets/Gemini_Generated_Image_xuf68ixuf68ixuf6.png" alt="Perfil de Fernanda" width="128" height="128">
+                            </span>
+                        </span>
+                        <figcaption class="nome-perfil">Fernanda</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <!-- perfil 2 -->
+            <li class="item-perfil">
+                <a href="catalogo/catalogo.html" class="perfil">
+                    <figure class="avatar-container">
+                        <span class="imagem-perfil tema-cris" aria-hidden="true">
+                            <span class="icone-avatar">
+                                <img src="assets/Gemini_Generated_Image_9junzu9junzu9jun.png" alt="Perfil dE Guilherme" width="128" height="128">
+                            </span>
+                        </span>
+                        <figcaption class="nome-perfil">Enzo</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <!-- perfil 3 -->
+            <li class="item-perfil">
+                <a href="catalogo/catalogo.html" class="perfil">
+                    <figure class="avatar-container">
+                        <span class="imagem-perfil tema-cris" aria-hidden="true">
+                            <span class="icone-avatar">
+                                <img src="assets/Gemini_Generated_Image_6ounr26ounr26oun.png" alt="Perfil de Thamiris" width="128" height="128">
+                            </span>
+                        </span>
+                        <figcaption class="nome-perfil">Pedro</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+        <section class="gerenciar">
+            <button type="button" class="botao-gerenciar">Gerenciar Perfis</button>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
